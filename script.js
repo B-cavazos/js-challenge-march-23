@@ -42,21 +42,6 @@ let dirtyArray = [1, 'apple', false, null, 'bananas', 45, '', 'alkali', undefine
 console.log(dirtyArray);
 
 const truthy = (array) => {
-    // debugger;
-    array.map(
-        Boolean(array.index)
-
-        // if (array[i] === false){
-            console.log(array.index);
-        // };
-    );
- 
-    /* for(i=0; i < array.length; i++){
-        if (array[i] ===  undefined || null ||"" ||false){
-            console.log(array[i]); 
-        }
-    };   */
-      
 };
 
 truthy(dirtyArray);
