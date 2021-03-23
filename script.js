@@ -1,8 +1,4 @@
 /* ====== Coding Challenge: Javascript Arrays 3.24.21 ======
-
-3. Create a function that removes all unnecessary elements from an array
-  a. use this array: let dirtyArray = [1, 'apple', false, null, 'bananas', 45, '', 'alkali', undefined];
-  b. remove the falsy values so that the function returns: [1, 'apple', 'bananas', 45, 'alkali'];
 4. Create a function that returns a duplicate free array
   a. let duplicateArray = [1, 4, 9, 4, 100, 4, 30, 1]
   b. the function should return [1, 4, 9, 100, 30] */
@@ -37,3 +33,31 @@ const reverse = (array) =>{
 };
 
 reverse(bevies);
+
+
+/* 3. Create a function that removes all unnecessary elements from an array
+  a. use this array: let dirtyArray = [1, 'apple', false, null, 'bananas', 45, '', 'alkali', undefined];
+  b. remove the falsy values so that the function returns: [1, 'apple', 'bananas', 45, 'alkali']; */
+let dirtyArray = [1, 'apple', false, null, 'bananas', 45, '', 'alkali', undefined];
+console.log(dirtyArray);
+
+const truthy = (array) => {
+    // debugger;
+    array.map(
+        Boolean(array.index)
+
+        // if (array[i] === false){
+            console.log(array.index);
+        // };
+    );
+ 
+    /* for(i=0; i < array.length; i++){
+        if (array[i] ===  undefined || null ||"" ||false){
+            console.log(array[i]); 
+        }
+    };   */
+      
+};
+
+truthy(dirtyArray);
+console.log();
