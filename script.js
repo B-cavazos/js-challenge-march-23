@@ -38,6 +38,7 @@ reverse(bevies);
 let dirtyArray = [1, 'apple', false, null, 'bananas', 45, '', 'alkali', undefined];
 console.log(dirtyArray);
 
+
 const truthy = (array) => {
 };
 
@@ -56,10 +57,16 @@ console.log('Array with duplicates: ', duplicateArray);
 let noDupeArray = []; //setting up a new array
 console.log('noDupeArray before: ', noDupeArray);
 
-duplicateArray.forEach((num) => { //for each element in duplicateArray (old), run a function with parameter of 'num'
-    if (!noDupeArray.includes(num)) { //if the new array doesnt include the element(parameter) from the old array
-        noDupeArray.push(num); //push element (parameter) into new array
+const woDupes = (array, newArray) => {
+
+    array.forEach((num) => { //for each element in duplicateArray (old), run a function with parameter of 'num'
+    if (!newArray.includes(num)) { //if the new array doesnt include the element(parameter) from the old array
+        newArray.push(num); //push element (parameter) into new array
     }
 });
+
+}; //put code into function per instructions
+
+woDupes(duplicateArray, noDupeArray);
 
 console.log('noDupeArray after: ', noDupeArray); 
