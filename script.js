@@ -36,14 +36,33 @@ reverse(bevies);
   a. use this array: let dirtyArray = [1, 'apple', false, null, 'bananas', 45, '', 'alkali', undefined];
   b. remove the falsy values so that the function returns: [1, 'apple', 'bananas', 45, 'alkali']; */
 let dirtyArray = [1, 'apple', false, null, 'bananas', 45, '', 'alkali', undefined];
-console.log(dirtyArray);
+console.log('dirtyArray: ', dirtyArray);
 
+const cleanUp = (oldArray, newArray) =>{
 
-const truthy = (array) => {
+    newArray = oldArray.filter(x => x);
+    console.log('The correct code that I dont fully understand returns:', newArray);
+
 };
 
-truthy(dirtyArray);
-console.log();
+cleanUp(dirtyArray);
+
+    //*3 work in progress? 
+let MyCleanArray=[];
+        // console.log('MyCleanArray before: ', MyCleanArray);
+
+const truthy = (array, newArray) => {
+
+    array.forEach((item) => { //for each element in dirtyArray (old), run a function with parameter of 'item'
+        if (item === Boolean(true)){
+            newArray.push(item); //push element (parameter) into new array
+        }
+});
+
+};
+
+truthy(dirtyArray, MyCleanArray);
+        // console.log('MyCleanArray after: ', MyCleanArray);
 
 
 
@@ -57,16 +76,16 @@ console.log('Array with duplicates: ', duplicateArray);
 let noDupeArray = []; //setting up a new array
 console.log('noDupeArray before: ', noDupeArray);
 
-const woDupes = (array, newArray) => {
+const noDupes = (array, newArray) => {
 
     array.forEach((num) => { //for each element in duplicateArray (old), run a function with parameter of 'num'
-    if (!newArray.includes(num)) { //if the new array doesnt include the element(parameter) from the old array
-        newArray.push(num); //push element (parameter) into new array
-    }
-});
+        if (!newArray.includes(num)) { //if the new array doesnt include the element(parameter) from the old array
+            newArray.push(num); //push element (parameter) into new array
+        }
+    });
 
 }; //put code into function per instructions
 
-woDupes(duplicateArray, noDupeArray);
+noDupes(duplicateArray, noDupeArray);
 
 console.log('noDupeArray after: ', noDupeArray); 
