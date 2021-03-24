@@ -4,17 +4,19 @@
   a. The function should take two parameters: the size of the array and the item to pass in
   b. const someArrayFunc = (arraySize, valueToPass) => {'Code for function'}
   c. expected result someArrayFunction(3, 'apples') = ['apples', 'apples', 'apples'] */
-let items = [];
-console.log(items);
 
 const duplication = (arraySize, valueToPass) =>{
-    for(i=0; i < arraySize; i++){
-        items.push(valueToPass);
+let items = [];     //function CREATES an empty array 
+console.log(items);
+
+ for(i=0; i < arraySize; i++){
+    items.push(valueToPass);
     }
+
+    return items;
 };
 
-duplication(10,'GO!');
-console.log(items)
+console.log(duplication(10,'Go!'));
 
 
 
@@ -25,10 +27,11 @@ console.log(bevies);
 
 const reverse = (array) =>{
     array.reverse();
-    console.log('The reversed order is:', array);
+    return array; //return is different from console.log
 };
 
-reverse(bevies);
+console.log(reverse(bevies)); //just showing the bevies 
+//NOTE: this is array has actually been reordered because the function does not create a new variable for the param.
 
 
 
@@ -41,29 +44,11 @@ console.log('dirtyArray: ', dirtyArray);
 const cleanUp = (oldArray, newArray) =>{
 
     newArray = oldArray.filter(x => x);
-    console.log('The correct code that I dont fully understand returns:', newArray);
+    return newArray;
 
 };
 
-cleanUp(dirtyArray);
-
-    //*3 work in progress? 
-let MyCleanArray=[];
-        // console.log('MyCleanArray before: ', MyCleanArray);
-
-const truthy = (array, newArray) => {
-
-    array.forEach((item) => { //for each element in dirtyArray (old), run a function with parameter of 'item'
-        if (item === Boolean(true)){
-            newArray.push(item); //push element (parameter) into new array
-        }
-});
-
-};
-
-truthy(dirtyArray, MyCleanArray);
-        // console.log('MyCleanArray after: ', MyCleanArray);
-
+console.log('The clean array: ', cleanUp(dirtyArray,[]));
 
 
 /* 4. Create a function that returns a duplicate free array
